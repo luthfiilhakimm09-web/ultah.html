@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ucapan Ulang Tahun untuk Sayang 💖</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      text-align: center;
+      padding: 100px 20px;
+      color: #333;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .btn {
+      background: #ff4f81;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 30px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #ff7096;
+      transform: scale(1.05);
+    }
+    .loading {
+      display: none;
+      margin: 30px auto;
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #ff4f81;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .message {
+      display: none;
+      animation: fadeIn 2s ease forwards;
+      margin-top: 20px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    img {
+      width: 250px;
+      border-radius: 20px;
+      margin-top: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>🎂 Hai sayangkuuu 🎂</h1>
+  <button class="btn" onclick="showLoading()">Click me!!</button>
+
+  <div class="loading" id="loading"></div>
+
+  <div class="message" id="message">
+    <p>Selamat ulang tahun, sayangku 💕<br>
+    Semoga setiap detik hidupmu dipenuhi tawa, cinta, dan kebahagiaan.<br>
+    Terima kasih sudah hadir dan mewarnai hidupku.<br>
+    Aku bersyukur setiap hari bisa mengenalmu.<br>
+    I love you always 💖</p>
+    <img src="ultah.jpeg" alt="Foto Sayang">
+  </div>
+
+  <script>
+    function showLoading() {
+      const btn = document.querySelector('.btn');
+      const loading = document.getElementById('loading');
+      const message = document.getElementById('message');
+
+      btn.style.display = 'none';
+      loading.style.display = 'block';
+
+      setTimeout(() => {
+        loading.style.display = 'none';
+        message.style.display = 'block';
+      }, 3000); // durasi loading 3 detik
+    }
+  </script>
+</body>
+</html>
